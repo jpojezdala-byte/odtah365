@@ -7,33 +7,41 @@
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="#122240">
 <link rel="icon" href="data:image/svg+xml,%3Csvg viewBox='0 0 48 48' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='48' height='48' rx='10' fill='%23122240'/%3E%3Cg fill='none' stroke='%23F0A500' stroke-width='3.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 18C6 15.6 8 14.5 10.2 14.5C12.8 14.5 14.5 16 14.5 18.3C14.5 20.5 12.8 22 10.2 22C13 22 15 23.6 15 26.3C15 29 12.8 30.8 10.2 30.8C7.7 30.8 5.7 29.6 5.4 27.4'/%3E%3Cpath d='M28.4 16C27 14.9 25.6 14.5 24.2 14.5C20.8 14.5 19.2 17.5 19.2 22.6C19.2 27.8 21 30.8 24.2 30.8C27 30.8 28.9 28.8 28.9 26.1C28.9 23.3 27 21.5 24.4 21.5C22 21.5 19.8 23 19.4 25.2'/%3E%3Cpath d='M42.6 14.8H34.8L34 22.3C35.2 21.5 36.5 21.1 37.9 21.1C40.9 21.1 43 23.2 43 26C43 28.9 40.9 30.8 37.9 30.8C35.7 30.8 34.1 29.9 33.4 28.4'/%3E%3C/g%3E%3Cpath d='M8 37H40' stroke='%23fff' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Barlow:wght@400;600&display=swap">
 <style>
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
-body{margin:0;min-height:100vh;min-height:100dvh;display:grid;place-items:center;background:#122240;color:#fff;font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;line-height:1.55;padding:32px 16px;text-align:center}
-.box{width:100%;max-width:520px}
-.brand{display:inline-flex;align-items:center;gap:12px;text-decoration:none;color:#fff;text-align:left}
-.brand svg{width:52px;height:52px;flex:none;border-radius:10px;box-shadow:0 0 0 1px rgba(255,255,255,.18)}
-.brand b{display:block;font-family:"Montserrat","Helvetica Neue",Arial,sans-serif;font-weight:800;font-size:24px;letter-spacing:-.01em;line-height:1;white-space:nowrap}
-.brand b span{color:#F0A500}
-.brand small{display:block;font-size:13px;font-weight:600;color:#C7D0DE;margin-top:6px;white-space:nowrap}
-h1{font-family:"Montserrat","Helvetica Neue",Arial,sans-serif;font-weight:800;font-size:clamp(28px,7vw,40px);letter-spacing:-.02em;line-height:1.15;margin:32px 0 10px}
-p{margin:0 auto 26px;max-width:42ch;color:#C7D0DE;font-size:16px}
-p b{color:#fff}
-.cta{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:50px;padding:13px 20px;border-radius:10px;border:1.5px solid transparent;font-weight:700;font-size:16px;line-height:1.2;text-decoration:none;max-width:100%}
+:root{--navy:#122240;--amber:#F0A500;--amber-deep:#D99400;--amber-ink:#161200;--on-navy-mute:#B8C3D6;--on-navy-2:#9AA8BC;--hair:rgba(255,255,255,.18);
+  --f-text:"Barlow",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;--f-disp:"Barlow Condensed","Arial Narrow",Arial,sans-serif}
+body{margin:0;min-height:100vh;min-height:100dvh;display:grid;align-items:center;background:var(--navy);color:#fff;font:400 17px/1.55 var(--f-text);padding:32px 16px}
+.box{width:100%;max-width:560px;margin-inline:auto;text-align:left}
+.brand{display:inline-flex;align-items:center;gap:12px;min-height:44px;text-decoration:none;color:#fff}
+.brand svg{width:48px;height:48px;flex:none;border-radius:10px;box-shadow:0 0 0 1px var(--hair)}
+.brand b{display:block;font:700 28px/1 var(--f-disp);letter-spacing:.02em;white-space:nowrap}
+.brand b span{color:var(--amber)}
+.brand small{display:block;margin-top:5px;font:600 13px/1 var(--f-text);color:var(--on-navy-mute);white-space:nowrap}
+h1{position:relative;margin:40px 0 14px;padding-top:20px;font:700 clamp(44px,14px + 8vw,72px)/.95 var(--f-disp);letter-spacing:-.005em}
+h1::before{content:"";position:absolute;left:0;top:0;width:100%;height:3px;background:var(--amber)}
+p{margin:0 0 28px;max-width:42ch;font-size:18px;color:var(--on-navy-mute)}
+p b{color:var(--amber);font-weight:600}
+.cta{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;max-width:100%;padding:12px 20px;border-radius:4px;border:1.5px solid transparent;font:600 17px/1.2 var(--f-text);text-decoration:none;transition:transform 80ms cubic-bezier(.2,.7,.2,1)}
+.btn:active{transform:translateY(1px)}
 .btn svg{width:20px;height:20px;flex:none}
-.call{background:#F0A500;border-color:#F0A500;color:#161200}
-.call:hover{background:#D99400;border-color:#D99400}
-.home{background:transparent;color:#fff;border-color:rgba(255,255,255,.45)}
-.home:hover{border-color:#fff;background:rgba(255,255,255,.06)}
-a:focus-visible{outline:3px solid #F0A500;outline-offset:3px}
-.fine{margin:22px 0 0;font-size:13px;color:#9AA8BC}
+.call{background:var(--amber);border-color:var(--amber);color:var(--amber-ink);box-shadow:inset 0 -3px 0 var(--amber-deep)}
+.home{background:transparent;color:#fff;border-color:rgba(255,255,255,.55)}
+@media (hover:hover){.call:hover{filter:brightness(.95)}.home:hover{border-color:#fff}}
+a:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.call:focus-visible{outline-color:#fff}
+.fine{margin:28px 0 0;padding-top:14px;border-top:1px solid var(--hair);font-size:14px;color:var(--on-navy-2)}
 @media (max-width:400px){.cta .btn{width:100%}}
+@media (prefers-reduced-motion:reduce){.btn{transition:none}}
 </style>
 </head>
 <body>
-<main class="box">
+<main class="box sheet">
   <a class="brand" id="logo" href="/" aria-label="ODŤAH 365, úvodná stránka">
     <svg viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="10" fill="#122240"/><g fill="none" stroke="#F0A500" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18C6 15.6 8 14.5 10.2 14.5C12.8 14.5 14.5 16 14.5 18.3C14.5 20.5 12.8 22 10.2 22C13 22 15 23.6 15 26.3C15 29 12.8 30.8 10.2 30.8C7.7 30.8 5.7 29.6 5.4 27.4"/><path d="M28.4 16C27 14.9 25.6 14.5 24.2 14.5C20.8 14.5 19.2 17.5 19.2 22.6C19.2 27.8 21 30.8 24.2 30.8C27 30.8 28.9 28.8 28.9 26.1C28.9 23.3 27 21.5 24.4 21.5C22 21.5 19.8 23 19.4 25.2"/><path d="M42.6 14.8H34.8L34 22.3C35.2 21.5 36.5 21.1 37.9 21.1C40.9 21.1 43 23.2 43 26C43 28.9 40.9 30.8 37.9 30.8C35.7 30.8 34.1 29.9 33.4 28.4"/></g><path d="M8 37H40" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></svg>
     <span><b>ODŤAH <span>365</span></b><small>každý deň 8–22</small></span>
